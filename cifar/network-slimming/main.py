@@ -50,6 +50,7 @@ parser.add_argument('--arch', default='vgg', type=str,
 parser.add_argument('--depth', default=19, type=int,
                     help='depth of the neural network')
 
+os.environ["CUDA_VISIBLE_DEVICES"]="1"
 args = parser.parse_args()
 args.cuda = not args.no_cuda and torch.cuda.is_available()
 
